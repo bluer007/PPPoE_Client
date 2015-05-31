@@ -69,11 +69,14 @@
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="ConfigFile.cpp" />
+    <ClCompile Include="Control.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
     <ClInclude Include="ConfigFile.h" />
+    <ClInclude Include="Control.h" />
     <ClInclude Include="Def.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>

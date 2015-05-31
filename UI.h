@@ -67,10 +67,20 @@ public:
 	}
 };
 
+enum
+{
+	FLAG_CREATE_TASKBARICO = 0,		//创建托盘图标标志
+	FLAG_DELLTE_TASKBARICO = 1,		//删除托盘图标标志
+	WM_MYTASKBAR = WM_USER + 1,		//自定义托盘图标消息
+};
 
 class UI : public WindowImplBase
 {
 public:
+	
+
+	INT SetTaskbarIco(BOOL flag);
+
 	virtual LPCTSTR    GetWindowClassName() const { return _T("DUIMainFrame"); }
 	virtual CDuiString GetSkinFile() { return _T("UISkin1.xml"); }
 	virtual CDuiString GetSkinFolder() { return _T("alberl"); }
@@ -100,5 +110,8 @@ public:
 
 		__super::Notify(msg);
 	}
+
+private:
+	HWND m_hWnd;
 };
 
